@@ -11,13 +11,12 @@ body {
   align-items: center;
   height: 100vh;
   font-family: Arial, sans-serif;
-        
 }
 
 .container {
   background-color: #fff;
   width: 600px;
-  height: 730px;
+  height: 720px;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -54,14 +53,14 @@ p {
   padding: 10px;
   position: absolute;
   bottom: 0;
-  width: 10%;
+  width: 100%;
 }
 
 .timeline {
   position: relative;
   margin: 20px auto;
   padding: 20px 0;
-  width: 80%; 
+  width: 70%;
 }
 
 .timeline::before {
@@ -71,14 +70,14 @@ p {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: #222; 
+  background: #222;
   transform: translateX(-50%);
 }
 
 .timeline-item {
   position: relative;
   margin: 20px 0;
-  padding-left: 30px; 
+  padding-left: 30px;
 }
 
 .timeline-item::before {
@@ -88,7 +87,7 @@ p {
   width: 14px;
   height: 14px;
   background: #fff;
-  border: 2px solid #222; 
+  border: 2px solid #222;
   border-radius: 50%;
   transform: translateX(-50%);
 }
@@ -97,5 +96,34 @@ p {
   margin: 0;
   padding: 5px;
   font-size: 16px;
-  color: #333; 
+  color: #333;
+}
+
+/* Responsive Design for Phones */
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .header, .footer {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .content {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .timeline {
+    width: 90%;
+    padding: 10px 0;
+  }
+
+  .timeline-item p {
+    font-size: 14px;
+  }
 }
